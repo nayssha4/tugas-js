@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan Dua Bilangan</title>
+    <script>
+        // Fungsi untuk menjumlahkan dua bilangan
+        function jumlahkan() {
+            // Ambil nilai dari input
+            let bil1 = parseFloat(document.getElementById("bilangan1").value);
+            let bil2 = parseFloat(document.getElementById("bilangan2").value);
+
+            // Jumlahkan bilangan
+            let hasil = bil1 + bil2;
+
+            // Tampilkan hasil
+            document.getElementById("hasil").innerHTML = "Hasil: " + hasil;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Penjumlahan Dua Bilangan</h2>
+    
+    <!-- Input untuk bilangan pertama -->
+    <label for="bilangan1">Masukkan Bilangan Pertama:</label>
+    <input type="number" id="bilangan1" placeholder="Bilangan pertama"><br><br>
+
+    <!-- Input untuk bilangan kedua -->
+    <label for="bilangan2">Masukkan Bilangan Kedua:</label>
+    <input type="number" id="bilangan2" placeholder="Bilangan kedua"><br><br>
+
+    <!-- Tombol untuk melakukan penjumlahan -->
+    <button onclick="jumlahkan()">Jumlahkan</button>
+
+    <!-- Menampilkan hasil penjumlahan -->
+    <p id="hasil"></p>
+
+</body>
+</html>
+

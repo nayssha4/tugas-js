@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Array</title>
+</head>
+<body>
+    <h1>Menu Array</h1>
+
+    <script>
+        // 1. Menghitung Nilai Rata-rata
+        function hitungRataRata(arr) {
+            const total = arr.reduce((sum, value) => sum + value, 0);
+            return total / arr.length;
+        }
+
+        // 2. Mengurutkan Angka
+        function urutkanAngka(arr) {
+            return [...arr].sort((a, b) => a - b);
+        }
+
+        // 3. Mencari Angka Terbesar
+        function cariAngkaTerbesar(arr) {
+            return Math.max(...arr);
+        }
+
+        // 4. Deret Fibonacci
+        function deretFibonacci(n) {
+            const fibonacci = [0, 1];
+            for (let i = 2; i < n; i++) {
+                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+            }
+            return fibonacci.slice(0, n);
+        }
+
+        // Contoh Penggunaan
+        const arrayAngka = [5.5, 3.2, 8.1, 6.3, 4.7];
+
+        alert("Nilai Rata-rata: " + hitungRataRata(arrayAngka)); // Menampilkan rata-rata
+        alert("Angka Terurut: " + urutkanAngka(arrayAngka).join(", ")); // Menampilkan angka terurut
+        alert("Angka Terbesar: " + cariAngkaTerbesar(arrayAngka)); // Menampilkan angka terbesar
+        alert("Deret Fibonacci (n=10): " + deretFibonacci(10).join(", ")); // Menampilkan deret Fibonacci
+    </script>
+</body>
+</html>
